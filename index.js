@@ -9,6 +9,20 @@ function adicionarItem(nome, preco){
     atualizarCarrinho();
 }
 
+function excluirItem(nome){
+    const index = carrinho.findIndex(
+        item => item.nome === nome);
+
+    if( index !== -1){
+        total -= carrinho[index].preco;
+
+        carrinho.splice(index, 1);
+
+        atualizarCarrinho();
+    }
+    
+}
+
 function atualizarCarrinho(){
     const lista = document.getElementById("carrinho");
     lista.innerHTML = "";
