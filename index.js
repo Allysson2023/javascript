@@ -2,7 +2,16 @@ let carrinho = [];
 let total = 0;
 
 function adicionarItem(nome, preco){
-    carrinho.push({ nome, preco });
+
+    const itemExistente = carrinho.find(
+        item => item.nome === nome);
+
+    if (itemExistente){
+        itemExistente.quatidade += 1;
+    }else{
+        carrinho.push({ nome, preco, quatidade: 1});
+
+    }
 
     total += preco;
 
@@ -14,9 +23,14 @@ function excluirItem(nome){
         item => item.nome === nome);
 
     if( index !== -1){
-        total -= carrinho[index].preco;
 
-        carrinho.splice(index, 1);
+        if(carrinho[index].quatidade > 1){
+            carrinho[index].quatidade -= 1;
+            total -= carrinho[index].preco;
+        } else{
+            total -= carrinho[index].preco;
+            carrinho.splice(index, 1);
+        }
 
         atualizarCarrinho();
     }
@@ -29,7 +43,11 @@ function atualizarCarrinho(){
 
     carrinho.forEach(item => {
         const li = document.createElement("li");
-        li.textContent = item.nome + " - R$ " + item.preco;
+
+        const subtotal = item.preco * item.quatidade;
+
+        li.textContent = `${item.nome} x${item.quatidade} - R$ ${subtotal}`;
+
         lista.appendChild(li);
     });
 

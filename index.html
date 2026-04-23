@@ -3,32 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>treinamento</title>
 </head>
 <body>
 
-    <h2>Carrinho de compras</h2>
-    <ul id="carrinho"></ul>
-
-    <p>Total R$: <span id="total">0,00</span></p>
-
+    
+    
     <div>
         <p>Hamburguer - R$: 10,00 </p>
         <button onclick="adicionarItem('Hamburguer', 10)">
             Adicionar</button>
-        <button onclick="excluirItem('Hamburguer')">
-            Excluir</button>
-    </div>
-
+            <button onclick="excluirItem('Hamburguer')">
+                Excluir</button>
+            </div>
+            
     <div>
-        <p>Pizza - R$: 20,00 </p>
-        <button onclick="adicionarItem('Pizza', 20)">
+        <p>Refrigerante - R$: 8,00 </p>
+        <button onclick="adicionarItem('Refrigerante', 8)">
             Adicionar</button>
-        <button onclick="excluirItem('Pizza')">
-            Excluir</button>
-    </div>
-    
+            <button onclick="excluirItem('Refrigerante')">
+                Excluir</button>
+            </div>
+            
+            <div>
+                <p>Pizza - R$: 20,00 </p>
+                <button onclick="adicionarItem('Pizza', 20)">
+                    Adicionar</button>
+                    <button onclick="excluirItem('Pizza')">
+                        Excluir</button>
+                    </div>
+                    
+                <header class="carrinhoCompras">
 
-    <script src="index.js"></script>
-</body>
+                    <div class="carrinho-menu">
+                        <h2>Carrinho de compras</h2>
+                        <ul id="carrinho"></ul>
+                    </div>
+
+                    <div class="preco-total">
+                        <p>Total R$: <span id="total">0,00</span></p>
+                    </div>
+                    
+                </header>
+            
+            <script src="index.js"></script>
+        </body>
 </html>
