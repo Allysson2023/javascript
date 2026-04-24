@@ -8,45 +8,38 @@
 </head>
 <body>
 
-    
-    
     <div>
         <p>Hamburguer - R$: 10,00 </p>
-        <button onclick="adicionarItem('Hamburguer', 10)">
-            Adicionar</button>
-            <button onclick="excluirItem('Hamburguer')">
-                Excluir</button>
-            </div>
+        <button class="add-btn" data-id="1">Adicionar</button>
+        
+
+    </div>
             
     <div>
         <p>Refrigerante - R$: 8,00 </p>
-        <button onclick="adicionarItem('Refrigerante', 8)">
-            Adicionar</button>
-            <button onclick="excluirItem('Refrigerante')">
-                Excluir</button>
-            </div>
-            
-            <div>
-                <p>Pizza - R$: 20,00 </p>
-                <button onclick="adicionarItem('Pizza', 20)">
-                    Adicionar</button>
-                    <button onclick="excluirItem('Pizza')">
-                        Excluir</button>
-                    </div>
-                    
-                <header class="carrinhoCompras">
+        <button class="add-btn" data-id="2">Adicionar</button>
 
-                    <div class="carrinho-menu">
-                        <h2>Carrinho de compras</h2>
-                        <ul id="carrinho"></ul>
-                    </div>
-
-                    <div class="preco-total">
-                        <p>Total R$: <span id="total">0,00</span></p>
-                    </div>
-                    
-                </header>
+    </div>
             
-            <script src="index.js"></script>
-        </body>
+    <div>
+        <p>Pizza - R$: 20,00 </p>
+        <button class="add-btn" data-id="3">Adicionar</button>
+
+    </div>
+                    
+    <header class="carrinhoCompras">
+
+        <div class="carrinho-menu">
+            <h2>Carrinho de compras</h2>
+            <ul id="carrinho"></ul>
+        </div>
+
+        <div class="preco-total">
+            <p>Total R$: <span id="total">0,00</span></p>
+        </div>
+
+    </header>
+            
+    <script src="index.js"></script>
+</body>
 </html>
