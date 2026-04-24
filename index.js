@@ -116,4 +116,20 @@ function carregarCarrinho(){
     }
     atualizarCarrinho();
 }
+
+// Limpando carrinho salvo do localStorage
+function limparCarrinho(){
+    const confirmar = confirm("Tem certeza que deseja excluir carrinho?");
+    if(confirmar){
+        carrinho = [];
+        total = 0;
+    
+        localStorage.removeItem("carrinho");
+        localStorage.removeItem("total");
+    
+        atualizarCarrinho();
+        alert("Excluido com sucesso!")
+    }
+}
+
 carregarCarrinho();
